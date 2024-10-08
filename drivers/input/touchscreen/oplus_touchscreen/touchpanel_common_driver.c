@@ -595,7 +595,9 @@ static void tp_gesture_handle(struct touchpanel_data *ts)
 	}
 #endif // end of CONFIG_OPLUS_TP_APK
 
-	if (gesture_info_temp.gesture_type != UnkownGesture && gesture_info_temp.gesture_type != FingerprintDown && gesture_info_temp.gesture_type != FingerprintUp) {
+
+	if (gesture_info_temp.gesture_type != UnkownGesture && gesture_info_temp.gesture_type != FingerprintDown && gesture_info_temp.gesture_type != FingerprintUp && CHK_BIT(ts->gesture_enable_indep, (1 << gesture_info_temp.gesture_type))) {
+
 		memcpy(&ts->gesture, &gesture_info_temp, sizeof(struct gesture_info));
 #if GESTURE_RATE_MODE
 		if (ts->geature_ignore) {
