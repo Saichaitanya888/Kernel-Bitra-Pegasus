@@ -1369,17 +1369,17 @@
 				type = "passive";
 			};
 			skin_cpu_moderate_pre_lv1: skin-cpu-moderate-pre-lv1 {
-				temperature = <42000>;
-				hysteresis = <2000>;
-				type = "passive";
-			};
-			skin_cpu_moderate_pre_lvl2: skin-cpu-moderate-pre-lv2 {
 				temperature = <44000>;
 				hysteresis = <2000>;
 				type = "passive";
 			};
+			skin_cpu_moderate_pre_lvl2: skin-cpu-moderate-pre-lv2 {
+				temperature = <47000>;
+				hysteresis = <2000>;
+				type = "passive";
+			};
 			skin_cpu_moderate: skin-cpu-moderate {
-				temperature = <48000>;
+				temperature = <49000>;
 				hysteresis = <2000>;
 				type = "passive";
 			};
